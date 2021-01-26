@@ -50,7 +50,7 @@ export default [
                     path: '/admin/sub-page',
                     name: 'sub-page',
                     icon: 'smile',
-                    component: './Welcome',
+                    component: './ShowDoc',
                     authority: ['admin'],
                   },    {
                     path: '/admin/uploadDoc',

@@ -1,9 +1,6 @@
-// var API_SERVER = 'http://localhost:8090'
-// var API_SERVER = 'http://www.straightwood.art:3002'
-var LOCAL_SERVER = 'http://localhost:8090'
-var API_SERVER = 'http://www.hanhuikrkr.com:8090'
+import { API_SERVER, LOCAL_SERVER } from './api'
 
 
-// var API_SERVER = 'https://webmooc.online'
+// 用户接口声明
 
-export { API_SERVER,LOCAL_SERVER }
+export const API_USR_LOGIN = API_SERVER +'/user/login'

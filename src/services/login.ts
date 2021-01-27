@@ -1,13 +1,14 @@
 import request from '@/utils/request';
 
 export type LoginParamsType = {
-  userName: string;
+ uid: string;
   password: string;
   mobile: string;
   captcha: string;
 };
 
 export async function fakeAccountLogin(params: LoginParamsType) {
+  console.log(params)
   return request('/api/login/account', {
     method: 'POST',
     data: params,

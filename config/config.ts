@@ -7,6 +7,7 @@ import routes from './routes';
 const { REACT_APP_ENV } = process.env;
 
 export default defineConfig({
+  
   hash: true,
   antd: {},
   dva: {
@@ -36,9 +37,18 @@ export default defineConfig({
   },
   title: false,
   ignoreMomentLocale: true,
-  proxy: proxy[REACT_APP_ENV || 'dev'],
+  // proxy: proxy[REACT_APP_ENV || 'dev'],
+
+  proxy: {
+    '/api': {
+      'target': 'http://localhost:8108/',
+      'changeOrigin': true,
+      'pathRewrite': { '^' : '' },
+    },
+  },
   manifest: {
     basePath: '/',
   },
   esbuild: {},
+  
 });

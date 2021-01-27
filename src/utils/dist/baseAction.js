@@ -52,6 +52,7 @@ exports.__esModule = true;
 var request_1 = require("./request");
 var params_1 = require("./params");
 var react_1 = require("react");
+var mobx_1 = require("mobx");
 var BaseActions = /** @class */ (function (_super) {
     __extends(BaseActions, _super);
     function BaseActions() {
@@ -70,7 +71,7 @@ var BaseActions = /** @class */ (function (_super) {
                         return [4 /*yield*/, request_1["default"](url, params)];
                     case 1:
                         data = _a.sent();
-                        return [2 /*return*/, toJS(data)];
+                        return [2 /*return*/, mobx_1.toJS(data)];
                 }
             });
         }); };

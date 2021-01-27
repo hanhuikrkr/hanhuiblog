@@ -42,7 +42,7 @@ function fakeAccountLogin(params) {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             console.log(params);
-            return [2 /*return*/, request_1["default"]('/api/login/account', {
+            return [2 /*return*/, request_1["default"]('http://localhost:8108/user/login', {
                     method: 'POST',
                     data: params
                 })];

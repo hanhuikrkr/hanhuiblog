@@ -34,6 +34,7 @@ const Model: LoginModelType = {
 
   effects: {
     *login({ payload }, { call, put }) {
+      // TODO 查看这里在mock环境下的数据
       const response = yield call(fakeAccountLogin, payload);
       yield put({
         type: 'changeLoginStatus',

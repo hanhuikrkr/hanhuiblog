@@ -8,10 +8,10 @@ const waitTime = (time: number = 100) => {
   });
 };
 
-async function getFakeCaptcha(req: Request, res: Response) {
-  await waitTime(2000);
-  return res.json('captcha-xxx');
-}
+// async function getFakeCaptcha(req: Request, res: Response) {
+//   await waitTime(2000);
+//   return res.json('captcha-xxx');
+// }
 
 // 代码中会兼容本地 service mock 以及部署站点的静态数据
 export default {
@@ -88,7 +88,7 @@ export default {
     },
   ],
   // TODO
-  'POST /user/login': async (req: Request, res: Response) => {
+  'POST /api/login/account': async (req: Request, res: Response) => {
     const { password, userName, type } = req.body;
     await waitTime(2000);
     if (password === 'user' && userName === 'admin') {
@@ -162,5 +162,5 @@ export default {
     });
   },
 
-  'GET  /api/login/captcha': getFakeCaptcha,
+  // 'GET  /api/login/captcha': getFakeCaptcha,
 };

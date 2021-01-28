@@ -38,8 +38,15 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
+var querystring_1 = require("querystring");
+var authority_1 = require("@/utils/authority");
+var umi_1 = require("umi");
+var login_1 = require("@/services/login");
+var utils_1 = require("@/utils/utils");
+var antd_1 = require("antd");
+var token_1 = require("@/utils/token");
 var user_1 = require("@/services/user");
-// TODO dva here @umijs/plugin-model
+// TODO dva here @umijs/plugin-model  & current user here
 var UserModel = {
     namespace: 'user',
     state: {
@@ -69,11 +76,16 @@ var UserModel = {
             var call = _a.call, put = _a.put;
             return __generator(this, function (_b) {
                 switch (_b.label) {
-                    case 0: return [4 /*yield*/, call(user_1.queryCurrent)];
-                    case 1:
-                        response = _b.sent();
+                    case 0:
+                        response = token_1.getUser();
                         return [4 /*yield*/, put({
                                 type: 'saveCurrentUser',
+                                payload: response
+                            })];
+                    case 1:
+                        _b.sent();
+                        return [4 /*yield*/, put({
+                                type: 'changeLoginStatus',
                                 payload: response
                             })];
                     case 2:
@@ -81,9 +93,69 @@ var UserModel = {
                         return [2 /*return*/];
                 }
             });
+        },
+        login: function (_a, _b) {
+            var response, urlParams, params, redirect, redirectUrlParams;
+            var payload = _a.payload;
+            var call = _b.call, put = _b.put;
+            return __generator(this, function (_c) {
+                switch (_c.label) {
+                    case 0: return [4 /*yield*/, call(login_1.fakeAccountLogin, payload)];
+                    case 1:
+                        response = _c.sent();
+                        return [4 /*yield*/, put({
+                                type: 'changeLoginStatus',
+                                payload: response
+                            })];
+                    case 2:
+                        _c.sent();
+                        console.log(response);
+                        // Login successfully
+                        if (response.status === 'ok') {
+                            token_1.saveUser(response);
+                            urlParams = new URL(window.location.href);
+                            params = utils_1.getPageQuery();
+                            antd_1.message.success('🎉 🎉 🎉  登录成功！');
+                            redirect = params.redirect;
+                            if (redirect) {
+                                redirectUrlParams = new URL(redirect);
+                                if (redirectUrlParams.origin === urlParams.origin) {
+                                    redirect = redirect.substr(urlParams.origin.length);
+                                    if (redirect.match(/^\/.*#/)) {
+                                        redirect = redirect.substr(redirect.indexOf('#') + 1);
+                                    }
+                                }
+                                else {
+                                    window.location.href = '/';
+                                    return [2 /*return*/];
+                                }
+                            }
+                            umi_1.history.replace(redirect || '/');
+                        }
+                        return [2 /*return*/];
+                }
+            });
+        },
+        logout: function () {
+            token_1.removeUser();
+            var redirect = utils_1.getPageQuery().redirect;
+            // Note: There may be security issues, please note
+            if (window.location.pathname !== '/user/login' && !redirect) {
+                umi_1.history.replace({
+                    pathname: '/user/login',
+                    search: querystring_1.stringify({
+                        redirect: window.location.href
+                    })
+                });
+            }
         }
     },
     reducers: {
+        changeLoginStatus: function (state, _a) {
+            var payload = _a.payload;
+            authority_1.setAuthority(payload.currentAuthority);
+            return __assign(__assign({}, state), { status: payload.status, type: payload.type });
+        },
         saveCurrentUser: function (state, action) {
             return __assign(__assign({}, state), { currentUser: action.payload || {} });
         },

@@ -31,7 +31,7 @@ var Login = function (props) {
     var handleSubmit = function (values) {
         var dispatch = props.dispatch;
         dispatch({
-            type: 'login/login',
+            type: 'user/login',
             payload: __assign(__assign({}, values), { type: type })
         });
     };
@@ -56,7 +56,7 @@ var Login = function (props) {
                     defaultMessage: '账户或密码错误（admin/ant.design)'
                 }) })),
             react_1["default"].createElement(react_1["default"].Fragment, null,
-                react_1["default"].createElement(pro_form_1.ProFormText, { name: "userName", fieldProps: {
+                react_1["default"].createElement(pro_form_1.ProFormText, { name: "uid", fieldProps: {
                         size: 'large',
                         prefix: react_1["default"].createElement(icons_1.UserOutlined, { className: index_less_1["default"].prefixIcon })
                     }, placeholder: intl.formatMessage({
@@ -97,6 +97,6 @@ exports["default"] = umi_1.connect(function (_a) {
     var login = _a.login, loading = _a.loading;
     return ({
         userLogin: login,
-        submitting: loading.effects['login/login']
+        submitting: loading.effects['user/login']
     });
 })(Login);

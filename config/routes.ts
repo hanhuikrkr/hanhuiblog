@@ -38,7 +38,14 @@ export default [
                 name: 'welcome',
                 icon: 'smile',
                 component: './Welcome',
-              },
+              },{
+                path: '/doc/show/sub-page',
+              
+                icon: 'smile',
+                component: './ShowDoc',
+              
+              }
+            ,
               {
                 path: '/admin',
                 name: 'admin',

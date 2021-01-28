@@ -2,7 +2,7 @@ export default {
   'pages.layouts.userLayout.title': 'Hanhuiとは、杭州師範大学13号館106室で最も落ち着きのない奴である。',
   'pages.login.accountLogin.tab': 'アカウントログイン',
   'pages.login.accountLogin.errorMessage':
-    'ユーザー名/パスワードが正しくありません（admin/ant.design)',
+    'ユーザー名/パスワードが正しくありません（user)',
   'pages.login.username.placeholder': 'ユーザー名：adminまたはuser',
   'pages.login.username.required': 'ユーザー名を入力してください！', 
   'pages.login.password.placeholder': 'パスワード：ant.design',

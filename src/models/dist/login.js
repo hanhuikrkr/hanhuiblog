@@ -65,6 +65,7 @@ var Model = {
                             })];
                     case 2:
                         _c.sent();
+                        console.log(response);
                         // Login successfully
                         if (response.status === 'ok') {
                             urlParams = new URL(window.location.href);

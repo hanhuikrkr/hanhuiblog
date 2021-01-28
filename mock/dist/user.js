@@ -44,18 +44,10 @@ var waitTime = function (time) {
         }, time);
     });
 };
-function getFakeCaptcha(req, res) {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, waitTime(2000)];
-                case 1:
-                    _a.sent();
-                    return [2 /*return*/, res.json('captcha-xxx')];
-            }
-        });
-    });
-}
+// async function getFakeCaptcha(req: Request, res: Response) {
+//   await waitTime(2000);
+//   return res.json('captcha-xxx');
+// }
 // 代码中会兼容本地 service mock 以及部署站点的静态数据
 exports["default"] = {
     // 支持值为 Object 和 Array
@@ -131,7 +123,7 @@ exports["default"] = {
         },
     ],
     // TODO
-    'POST /user/login': function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    'POST /api/login/account': function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
         var _a, password, userName, type;
         return __generator(this, function (_b) {
             switch (_b.label) {
@@ -211,6 +203,5 @@ exports["default"] = {
             message: 'Unauthorized',
             path: '/base/category/list'
         });
-    },
-    'GET  /api/login/captcha': getFakeCaptcha
+    }
 };

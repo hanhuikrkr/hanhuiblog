@@ -13,7 +13,7 @@ import ProForm, { ProFormCaptcha, ProFormCheckbox, ProFormText } from '@ant-desi
 import { Link, useIntl, connect, FormattedMessage } from 'umi';
 import { getFakeCaptcha } from '@/services/login';
 import type { Dispatch } from 'umi';
-import type { StateType } from '@/models/login';
+import type { CurrentUser } from '@/models/user';
 import type { LoginParamsType } from '@/services/login';
 import type { ConnectState } from '@/models/connect';
 
@@ -21,7 +21,7 @@ import styles from './index.less';
 
 export type LoginProps = {
   dispatch: Dispatch;
-  userLogin: StateType;
+  userLogin: CurrentUser;
   submitting?: boolean;
 };
 
@@ -47,7 +47,7 @@ const Login: React.FC<LoginProps> = (props) => {
   const handleSubmit = (values: LoginParamsType) => {
     const { dispatch } = props;
     dispatch({
-      type: 'login/login',
+      type: 'user/login',
       payload: { ...values, type },
     });
   };
@@ -83,7 +83,7 @@ const Login: React.FC<LoginProps> = (props) => {
 
         <>
           <ProFormText
-            name="userName"
+            name="uid"
             fieldProps={{
               size: 'large',
               prefix: <UserOutlined className={styles.prefixIcon} />,
@@ -159,5 +159,5 @@ const Login: React.FC<LoginProps> = (props) => {
 
 export default connect(({ login, loading }: ConnectState) => ({
   userLogin: login,
-  submitting: loading.effects['login/login'],
+  submitting: loading.effects['user/login'],
 }))(Login);

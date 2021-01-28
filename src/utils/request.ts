@@ -42,9 +42,8 @@ const errorHandler = (error: { response: Response }): Response => {
 
 /** 配置request请求时的默认参数 */
 const request = extend({
-  errorHandler,
-  // 默认错误处理
-  credentials: 'omit', // 默认请求是否带上cookie
+  errorHandler, // 默认错误处理
+
 });
 
 export default request;

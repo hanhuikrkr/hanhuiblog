@@ -41,8 +41,6 @@ var errorHandler = function (error) {
 };
 /** 配置request请求时的默认参数 */
 var request = umi_request_1.extend({
-    errorHandler: errorHandler,
-    // 默认错误处理
-    credentials: 'omit'
+    errorHandler: errorHandler
 });
 exports["default"] = request;

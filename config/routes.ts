@@ -38,18 +38,15 @@ export default [
                 name: 'welcome',
                 icon: 'smile',
                 component: './Welcome',
-              },{
+              },
+              {
                 path: '/showdoc',
-         
                 component: './ShowDoc',
-              
-              }
-            ,
+              },
               {
                 path: '/admin',
                 name: 'admin',
                 icon: 'crown',
-             
                 authority: ['admin'],
                 routes: [
                   {
@@ -58,7 +55,8 @@ export default [
                     icon: 'smile',
                     component: './ShowDoc',
                     authority: ['admin'],
-                  },    {
+                  },
+                  {
                     path: '/admin/uploadDoc',
                     name: '上传文档',
                     icon: 'smile',
@@ -67,7 +65,6 @@ export default [
                   },
                 ],
               },
-             
               {
                 name: 'list.table-list',
                 icon: 'table',
@@ -85,12 +82,20 @@ export default [
                 icon: 'smile',
                 path: '/network',
                 component: './DocList',
-                routes: [ {
-                  name: 'TCP',
-                  icon: 'smile',
-                  path: '/Network/Tcp?sort=110101',
-                  component: './DocList',
-                },]
+                routes: [
+                  {
+                    name: 'TCP',
+                    icon: 'smile',
+                    path: '/Network/Tcp?sort=110101',
+                    component: './DocList',
+                  },
+                ],
+              },
+              {
+                name: '个人项目',
+                icon: 'smile',
+                path: '/project',
+                component: './ProjectPage',
               },
               {
                 component: './404',

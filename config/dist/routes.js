@@ -40,7 +40,8 @@ exports["default"] = [
                                 name: 'welcome',
                                 icon: 'smile',
                                 component: './Welcome'
-                            }, {
+                            },
+                            {
                                 path: '/showdoc',
                                 component: './ShowDoc'
                             },
@@ -56,7 +57,8 @@ exports["default"] = [
                                         icon: 'smile',
                                         component: './ShowDoc',
                                         authority: ['admin']
-                                    }, {
+                                    },
+                                    {
                                         path: '/admin/uploadDoc',
                                         name: '上传文档',
                                         icon: 'smile',
@@ -82,12 +84,20 @@ exports["default"] = [
                                 icon: 'smile',
                                 path: '/network',
                                 component: './DocList',
-                                routes: [{
+                                routes: [
+                                    {
                                         name: 'TCP',
                                         icon: 'smile',
                                         path: '/Network/Tcp?sort=110101',
                                         component: './DocList'
-                                    },]
+                                    },
+                                ]
+                            },
+                            {
+                                name: '个人项目',
+                                icon: 'smile',
+                                path: '/project',
+                                component: './ProjectPage'
                             },
                             {
                                 component: './404'

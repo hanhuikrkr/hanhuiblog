@@ -88,3 +88,13 @@ export var docTypeOption = [
     ],
   },
 ];
+export let projectData=[{
+  id:"1",
+  owner:"韩麾",
+  title:"HANHUI BLOG",
+
+  cover:"http://hanhuikrkr.com:7112/hanhuiblog84.png",
+  subDescription:"采用umi构建的个人的学习博客网站",
+  updatedAt:"2021年1月30日",
+  href:"/"
+}]

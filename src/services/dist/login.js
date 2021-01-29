@@ -36,7 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-exports.getFakeCaptcha = exports.fakeAccountLogin = void 0;
+exports.fakeAccountLogin = void 0;
 var request_1 = require("@/utils/request");
 function fakeAccountLogin(params) {
     return __awaiter(this, void 0, void 0, function () {
@@ -51,11 +51,3 @@ function fakeAccountLogin(params) {
     });
 }
 exports.fakeAccountLogin = fakeAccountLogin;
-function getFakeCaptcha(mobile) {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            return [2 /*return*/, request_1["default"]("/api/login/captcha?mobile=" + mobile)];
-        });
-    });
-}
-exports.getFakeCaptcha = getFakeCaptcha;

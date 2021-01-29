@@ -52,5 +52,7 @@ export default {
   'menu.editor.koni': '拓扑编辑器',
   'menu.JavaScript':'JavaScript',
   'menu.计算机网络.TCP':'TCP',
-  'menu.计算机网络':'计算机网络'
+  'menu.计算机网络':'计算机网络',
+  'menu.个人项目"':'Personal Proj ',
+
 };

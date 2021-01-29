@@ -46,6 +46,10 @@ exports["default"] = [
                                 component: './ShowDoc'
                             },
                             {
+                                path: '/alertdoc',
+                                component: './AlertDocPage'
+                            },
+                            {
                                 path: '/admin',
                                 name: 'admin',
                                 icon: 'crown',
@@ -55,7 +59,7 @@ exports["default"] = [
                                         path: '/admin/sub-page',
                                         name: 'sub-page',
                                         icon: 'smile',
-                                        component: './ShowDoc',
+                                        component: './AlertDocList',
                                         authority: ['admin']
                                     },
                                     {
@@ -66,12 +70,6 @@ exports["default"] = [
                                         authority: ['admin']
                                     },
                                 ]
-                            },
-                            {
-                                name: 'list.table-list',
-                                icon: 'table',
-                                path: '/list',
-                                component: './DocList'
                             },
                             {
                                 name: 'JavaScript',

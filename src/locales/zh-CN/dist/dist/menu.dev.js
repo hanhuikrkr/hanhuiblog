@@ -1,10 +1,13 @@
-export default {
+"use strict";
+
+exports.__esModule = true;
+exports["default"] = {
   'menu.welcome': '欢迎',
   'menu.more-blocks': '更多区块',
   'menu.home': '首页',
   'menu.admin': '管理页',
   'menu.admin.sub-page': '修改文档',
-  'menu.admin.上传文档':'上传文档',
+  'menu.admin.上传文档': '上传文档',
   'menu.login': '登录',
   'menu.register': '注册',
   'menu.register.result': '注册结果',
@@ -50,9 +53,8 @@ export default {
   'menu.editor.flow': '流程编辑器',
   'menu.editor.mind': '脑图编辑器',
   'menu.editor.koni': '拓扑编辑器',
-  'menu.JavaScript':'JavaScript',
-  'menu.计算机网络.TCP':'TCP',
-  'menu.计算机网络':'计算机网络',
-  'menu.个人项目':'个人项目 ',
-
+  'menu.JavaScript': 'JavaScript',
+  'menu.计算机网络.TCP': 'TCP',
+  'menu.计算机网络': '计算机网络',
+  'menu.个人项目': '个人项目 '
 };

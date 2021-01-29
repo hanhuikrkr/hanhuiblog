@@ -36,7 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-exports.SelectDocData = exports.Selectquery = exports.upload = void 0;
+exports.DeleteOneDoc = exports.SelectAllDocList = exports.SelectDocData = exports.Selectquery = exports.updateDoc = exports.upload = void 0;
 var request_1 = require("@/utils/request");
 function upload(params) {
     return __awaiter(this, void 0, Promise, function () {
@@ -49,6 +49,17 @@ function upload(params) {
     });
 }
 exports.upload = upload;
+function updateDoc(params) {
+    return __awaiter(this, void 0, Promise, function () {
+        return __generator(this, function (_a) {
+            return [2 /*return*/, request_1["default"]('http://localhost:8108/doc/updateDoc', {
+                    method: 'POST',
+                    data: params
+                })];
+        });
+    });
+}
+exports.updateDoc = updateDoc;
 function Selectquery(params) {
     return __awaiter(this, void 0, Promise, function () {
         return __generator(this, function (_a) {
@@ -71,3 +82,25 @@ function SelectDocData(params) {
     });
 }
 exports.SelectDocData = SelectDocData;
+function SelectAllDocList() {
+    return __awaiter(this, void 0, Promise, function () {
+        return __generator(this, function (_a) {
+            return [2 /*return*/, request_1["default"]('http://localhost:8108/doc/selectAllDoc', {
+                    method: 'POST'
+                })];
+        });
+    });
+}
+exports.SelectAllDocList = SelectAllDocList;
+// 删除某博客
+function DeleteOneDoc(params) {
+    return __awaiter(this, void 0, Promise, function () {
+        return __generator(this, function (_a) {
+            return [2 /*return*/, request_1["default"]('http://localhost:8108/doc/DeleteOneDocById', {
+                    method: 'POST',
+                    data: params
+                })];
+        });
+    });
+}
+exports.DeleteOneDoc = DeleteOneDoc;

@@ -31,7 +31,7 @@ export default (props: { location: any }) => {
     });
   }, [props.location]);
   return (
-    <div className={styles.container}>
+    <div className={styles.g_listContainer}>
       <div id="components-list-demo-vertical">
         <List
           itemLayout="vertical"
@@ -39,13 +39,13 @@ export default (props: { location: any }) => {
           dataSource={listData}
           footer={
             <div style={{ textAlign: 'center' }}>
-              <b>到底了</b>
+              
             </div>
           }
           renderItem={(item) => (
             <List.Item
               key={item.iddoc + item.doctitle}
-              extra={<img width={272} alt="logo" src={item.docpicab} />}
+              extra={<img width={170} alt="logo" src={item.docpicab} />}
             >
               <List.Item.Meta
                 avatar={<Avatar src="http://www.hanhuikrkr.com:7112/57887545.png" />}

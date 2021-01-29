@@ -5,7 +5,7 @@ exports["default"] = {
     'menu.more-blocks': '更多区块',
     'menu.home': '首页',
     'menu.admin': '管理页',
-    'menu.admin.sub-page': '二级管理页',
+    'menu.admin.sub-page': '修改文档',
     'menu.admin.上传文档': '上传文档',
     'menu.login': '登录',
     'menu.register': '注册',
@@ -55,5 +55,5 @@ exports["default"] = {
     'menu.JavaScript': 'JavaScript',
     'menu.计算机网络.TCP': 'TCP',
     'menu.计算机网络': '计算机网络',
-    'menu.个人项目"': 'Personal Proj '
+    'menu.个人项目': '个人项目 '
 };

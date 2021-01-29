@@ -15,10 +15,9 @@ exports["default"] = (function (props) {
                 }
         });
     }, [props.location]);
-    return (react_1["default"].createElement("div", { className: index_less_1["default"].container },
+    return (react_1["default"].createElement("div", { className: index_less_1["default"].g_listContainer },
         react_1["default"].createElement("div", { id: "components-list-demo-vertical" },
-            react_1["default"].createElement(antd_1.List, { itemLayout: "vertical", size: "large", dataSource: listData, footer: react_1["default"].createElement("div", { style: { textAlign: 'center' } },
-                    react_1["default"].createElement("b", null, "\u5230\u5E95\u4E86")), renderItem: function (item) { return (react_1["default"].createElement(antd_1.List.Item, { key: item.iddoc + item.doctitle, extra: react_1["default"].createElement("img", { width: 272, alt: "logo", src: item.docpicab }) },
+            react_1["default"].createElement(antd_1.List, { itemLayout: "vertical", size: "large", dataSource: listData, footer: react_1["default"].createElement("div", { style: { textAlign: 'center' } }), renderItem: function (item) { return (react_1["default"].createElement(antd_1.List.Item, { key: item.iddoc + item.doctitle, extra: react_1["default"].createElement("img", { width: 170, alt: "logo", src: item.docpicab }) },
                     react_1["default"].createElement(antd_1.List.Item.Meta, { avatar: react_1["default"].createElement(antd_1.Avatar, { src: "http://www.hanhuikrkr.com:7112/57887545.png" }), title: react_1["default"].createElement("a", { href: "/showdoc?iddoc=" + item.iddoc }, item.doctitle), description: item.doctime }),
                     item.docab)); } }))));
 });

@@ -44,6 +44,10 @@ export default [
                 component: './ShowDoc',
               },
               {
+                path: '/alertdoc',
+                component: './AlertDocPage',
+              },
+              {
                 path: '/admin',
                 name: 'admin',
                 icon: 'crown',
@@ -53,7 +57,7 @@ export default [
                     path: '/admin/sub-page',
                     name: 'sub-page',
                     icon: 'smile',
-                    component: './ShowDoc',
+                    component: './AlertDocList',
                     authority: ['admin'],
                   },
                   {
@@ -65,12 +69,7 @@ export default [
                   },
                 ],
               },
-              {
-                name: 'list.table-list',
-                icon: 'table',
-                path: '/list',
-                component: './DocList',
-              },
+             
               {
                 name: 'JavaScript',
                 icon: 'smile',

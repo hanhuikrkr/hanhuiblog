@@ -1,0 +1,11 @@
+.textContainer {
+  min-height: 100%;
+  align-items: center;
+  align-self: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+}
+.text {
+  margin: 0 auto;
+  max-width: 1200px;
+}

@@ -1,9 +1,11 @@
 import * as React from 'react';
 import MarkdownIt from 'markdown-it';
 import MdEditor from 'react-markdown-editor-lite';
-import { Cascader, Input, Form, Button } from 'antd';
+import { Cascader, Input, Form, Button,notification } from 'antd';
 import { docTypeOption } from '../../constant/data';
 import styles from './index.less';
+import {history} from 'umi'
+import {upload,UploadProps}  from'@/services/doc.ts'
 // 导入编辑器的样式
 var hljs = require('highlight.js');
 import 'react-markdown-editor-lite/lib/index.css';
@@ -24,11 +26,7 @@ const mdParser = new MarkdownIt({
     return '<pre class="hljs"><code>' + mdParser.utils.escapeHtml(str) + '</code></pre>';
   },
 });
-//   Hybrid
-// 完成！
 
-//   Hybrid
-// 完成！
 function handleEditorChange({ html, text }: any) {
   //   console.log('handleEditorChange', html, text)
 }
@@ -38,8 +36,12 @@ const filter = (inputValue: any, path: any) => {
       option.label.toLowerCase().indexOf(inputValue.toLowerCase()) > -1,
   );
 };
+
 function onChange(value: any) {
-  console.log(value);
+
+
+  
+ 
 }
 const dropdownRender = (menus: React.ReactNode) => {
   return (
@@ -48,8 +50,31 @@ const dropdownRender = (menus: React.ReactNode) => {
     </div>
   );
 };
-const onFinish = (values: any) => {
-  console.log('Success:', values);
+const onFinish = async (values: any) => {
+  console.log(values);
+  
+  let params:UploadProps={
+    doctext:values.doctext.text,
+    docab:values.docab,
+    docpicab:values.docpicab,
+    doctitle:values.doctitle,
+    docathorname:'韩麾',
+    doctype:parseInt(values.doctype.join(''))
+  }
+
+  console.log('Success:', params);
+  let r =await upload(params);
+  console.log(r);
+  if (r.code==200){
+    notification.success({
+      message: '博客上传成功',
+      description:`《${params.doctitle}》`
+    })
+  }
+  history.push({
+    pathname: '/welcome'
+   
+  });
 };
 
 const onFinishFailed = (errorInfo: any) => {

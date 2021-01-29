@@ -41,8 +41,7 @@ exports["default"] = [
                                 icon: 'smile',
                                 component: './Welcome'
                             }, {
-                                path: '/doc/show/sub-page',
-                                icon: 'smile',
+                                path: '/showdoc',
                                 component: './ShowDoc'
                             },
                             {
@@ -86,7 +85,7 @@ exports["default"] = [
                                 routes: [{
                                         name: 'TCP',
                                         icon: 'smile',
-                                        path: '/Network/Tcp?sort=name',
+                                        path: '/Network/Tcp?sort=110101',
                                         component: './DocList'
                                     },]
                             },

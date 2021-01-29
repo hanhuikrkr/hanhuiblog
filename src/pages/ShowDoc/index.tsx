@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import MarkdownIt from 'markdown-it';
 import MdEditor from 'react-markdown-editor-lite';
-
+import { SelectDocData } from '@/services/doc.ts';
 // 导入编辑器的样式
 var hljs = require('highlight.js');
 import 'react-markdown-editor-lite/lib/index.css';
 import './vs2015.css';
-
+import { useEffect } from 'react';
+import styles from './index.less'
 // 初始化Markdown解析器
 const mdParser = new MarkdownIt({
   highlight: function (str, lang) {
@@ -23,11 +24,22 @@ const mdParser = new MarkdownIt({
 
 export default (props: any) => {
   const [text, setText] = useState('');
-
+  console.log(props);
+  useEffect(() => {
+    SelectDocData(props.location.query).then((r) => {
+      if (r)
+        if (r.code == 200) {
+          console.log(r);
+          setText(r.data.doctext);
+        }
+    });
+  });
   return (
     <>
-    
-      <div dangerouslySetInnerHTML={{ __html: mdParser.render(text) }}></div>
+    <div className={styles.textContainer}>
+
+      <div className={styles.text} dangerouslySetInnerHTML={{ __html: mdParser.render(text) }}></div>
+      </div>
     </>
   );
 };

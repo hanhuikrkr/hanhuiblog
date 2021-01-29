@@ -46,61 +46,45 @@ export var colorIndex = [
 
 export var docTypeOption = [
   {
-    value:'11000000',
-    valueMin: '11000000',
-    valueMax: '11999999',
+    value: '11',
     label: 'JavaScript',
     children: [
       {
-        value:'11010000',
-        valueMin: '11010000',
-        valueMax: '11019999',
+        value: '01',
         label: 'js-1',
         children: [
           {
-              value:'11010100',
-            valueMin: '11010100',
-            valueMax: '11010199',
+            value: '01',
             label: 'js-1-1',
           },
         ],
       },
       {
-          value:'11020000',
-        valueMin: '11020000',
-        valueMax: '11029999',
+        value: '02',
         label: 'js-2',
         children: [
           {
-              value:'11020100',
-            valueMin: '11020100',
-            valueMax: '11020199',
+            value: '01',
             label: 'js-2-1',
           },
         ],
-      }
+      },
     ],
   },
   {
-      value:'12000000',
-    valueMin: '12000000',
-    valueMax: '12999999',
+    value: '12',
     label: '计算机网络',
     children: [
       {
-          value:'12010000',
-        valueMin: '12010000',
-        valueMax: '12019999',
+        value: '01',
         label: 'jw-1',
         children: [
           {
-              value:'12010100',
-            valueMin: '12010100',
-            valueMax: '12010199',
+            value: '01',
             label: 'jw-1-1',
           },
         ],
       },
     ],
-  }
+  },
 ];

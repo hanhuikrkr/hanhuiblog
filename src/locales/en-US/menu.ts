@@ -49,5 +49,5 @@ export default {
   'menu.editor.flow': 'Flow Editor',
   'menu.editor.mind': 'Mind Editor',
   'menu.editor.koni': 'Koni Editor',
-  'menu.个人项目"':'Personal Proj '
+  'menu.个人项目"':'Personal Proj ',
 };

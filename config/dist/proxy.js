@@ -10,28 +10,28 @@ exports.__esModule = true;
 exports["default"] = {
     dev: {
         '/api/': {
-            target: 'http://localhost:8108',
+            target: 'http://www.hanhuikrkr.com:8108',
             changeOrigin: true,
             pathRewrite: { '^': '' }
         }
     },
     test: {
         '/api/': {
-            target: 'http://localhost:8108',
+            target: 'http://www.hanhuikrkr.com:8108',
             changeOrigin: true,
             pathRewrite: { '^': '' }
         }
     },
     pre: {
         '/api/': {
-            target: 'http://localhost:8108',
+            target: 'http://www.hanhuikrkr.com:8108',
             changeOrigin: true,
             pathRewrite: { '^': '' }
         }
     },
     proxy: {
         '/api': {
-            target: 'http://localhost:8108',
+            target: 'http://www.hanhuikrkr.com:8108',
             changeOrigin: true,
             pathRewrite: { '^/api': '' }
         }

@@ -9,7 +9,7 @@ export type LoginParamsType = {
 
 export async function fakeAccountLogin(params: LoginParamsType) {
   console.log(params)
-  return request('http://localhost:8108/user/login', {
+  return request('http://www.hanhuikrkr.com:8108/user/login', {
   // return request('/api/login/account', {
     method: 'POST',
     data: params,

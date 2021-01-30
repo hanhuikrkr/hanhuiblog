@@ -10,7 +10,7 @@ export default {
   'useranduserregister.login.sign-in-with': '其他登錄方式',
   'useranduserregister.login.signup': '註冊賬戶',
   'useranduserregister.login.login': '登錄',
-  'useranduserregister.register.register': '註冊',
+  'useranduserregister.register.register': '註冊開放されません',
   'useranduserregister.register.get-verification-code': '獲取驗證碼',
   'useranduserregister.register.sign-in': '使用已有賬戶登錄',
   'useranduserregister.register-result.msg': '妳的賬戶：{email} 註冊成功',

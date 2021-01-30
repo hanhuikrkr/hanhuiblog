@@ -4,6 +4,7 @@ var doc_1 = require("@/services/doc");
 var antd_1 = require("antd");
 var react_1 = require("react");
 var react_2 = require("react");
+var umi_1 = require("umi");
 var data = [
     {
         iddoc: '1',
@@ -51,7 +52,7 @@ exports["default"] = (function () {
             key: 'action',
             render: function (text, record) { return (React.createElement(antd_1.Space, { size: "middle" },
                 React.createElement("a", { onClick: function () { return onDelete(record.iddoc); } }, "\u5220\u9664"),
-                React.createElement("a", { href: "/alertdoc?iddoc=" + record.iddoc }, "\u4FEE\u6539"))); }
+                React.createElement(umi_1.Link, { to: "/alertdoc?iddoc=" + record.iddoc }, "\u4FEE\u6539"))); }
         },
     ];
     return React.createElement(antd_1.Table, { columns: columns, dataSource: data });

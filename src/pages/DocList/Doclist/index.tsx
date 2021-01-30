@@ -2,7 +2,9 @@ import React, { useEffect,useState } from 'react';
 import styles from './index.less';
 import { List, Avatar } from 'antd';
 import { Selectquery } from '@/services/doc.ts';
+import { PageContainer } from '@ant-design/pro-layout';
 import { MessageOutlined, LikeOutlined, StarOutlined } from '@ant-design/icons';
+import { Link } from 'umi';
 
 
 export interface listDataProps{
@@ -31,6 +33,9 @@ export default (props: { location: any }) => {
     });
   }, [props.location]);
   return (
+    <PageContainer>
+
+    
     <div className={styles.g_listContainer}>
       <div id="components-list-demo-vertical">
         <List
@@ -49,7 +54,7 @@ export default (props: { location: any }) => {
             >
               <List.Item.Meta
                 avatar={<Avatar src="http://www.hanhuikrkr.com:7112/57887545.png" />}
-                title={<a href={`/showdoc?iddoc=${item.iddoc}`}>{item.doctitle}</a>}
+                title={<Link to={`/showdoc?iddoc=${item.iddoc}`}>{item.doctitle}</Link>}
                 description={item.doctime}
               />
               {item.docab}
@@ -58,5 +63,6 @@ export default (props: { location: any }) => {
         />
       </div>
     </div>
+    </PageContainer>
   );
 };

@@ -94,6 +94,7 @@ exports.projectData = [{
         id: "1",
         owner: "韩麾",
         title: "HANHUI BLOG",
+        githref: "https://github.com/hanhuikrkr/hanhuiblog",
         cover: "http://hanhuikrkr.com:7112/hanhuiblog84.png",
         subDescription: "采用umi构建的个人的学习博客网站",
         updatedAt: "2021年1月30日",

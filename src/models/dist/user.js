@@ -50,7 +50,9 @@ var user_1 = require("@/services/user");
 var UserModel = {
     namespace: 'user',
     state: {
-        currentUser: {}
+        currentUser: {
+            currentAuthority: "guest"
+        }
     },
     effects: {
         fetch: function (_, _a) {

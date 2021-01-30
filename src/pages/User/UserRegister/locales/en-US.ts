@@ -11,7 +11,7 @@ export default {
   'useranduserregister.login.sign-in-with': 'Sign in with',
   'useranduserregister.login.signup': 'Sign up',
   'useranduserregister.login.login': 'Login',
-  'useranduserregister.register.register': 'Register',
+  'useranduserregister.register.register': 'Cannot Register now',
   'useranduserregister.register.get-verification-code': 'Get code',
   'useranduserregister.register.sign-in': 'Already have an account?',
   'useranduserregister.register-result.msg': 'Account：registered at {email}',

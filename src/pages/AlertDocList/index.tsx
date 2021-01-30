@@ -2,6 +2,7 @@ import { DeleteOneDoc, SelectAllDocList } from '@/services/doc';
 import { Table, Tag, Space } from 'antd';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { Link } from 'umi';
 export interface dataItem{
   iddoc: number;
   doctitle: string;
@@ -62,7 +63,7 @@ let params={iddoc:param}
       render: (text, record:dataItem) => (
         <Space size="middle">
           <a onClick={()=>onDelete(record.iddoc)}>删除</a>
-          <a href={`/alertdoc?iddoc=${record.iddoc}`}>修改</a>
+          <Link to={`/alertdoc?iddoc=${record.iddoc}`}>修改</Link>
         </Space>
       ),
     },

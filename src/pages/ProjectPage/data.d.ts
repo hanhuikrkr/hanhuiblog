@@ -10,9 +10,8 @@ export interface ListItemDataType {
   title: string;
  
   cover: string;
-  
+  githref:string;
   href: string;
-  
   updatedAt: string;
  
   subDescription: string;

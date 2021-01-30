@@ -5,7 +5,7 @@ exports["default"] = {
     'menu.more-blocks': 'More Blocks',
     'menu.home': 'Home',
     'menu.admin': 'Admin',
-    'menu.admin.sub-page': 'Sub-Page',
+    'menu.admin.sub-page': 'Update Doc',
     'menu.login': 'Login',
     'menu.register': 'Register',
     'menu.register.result': 'Register Result',

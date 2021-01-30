@@ -12,11 +12,11 @@ exports["default"] = umi_1.defineConfig({
         hmr: true
     },
     history: {
-        type: 'browser'
+        type: 'hash'
     },
     locale: {
         // default zh-CN
-        "default": ' zh-CN',
+        "default": 'zh-CN',
         antd: true,
         // default true, when it is true, will use `navigator.language` overwrite default
         baseNavigator: true
@@ -38,7 +38,7 @@ exports["default"] = umi_1.defineConfig({
     // proxy: proxy[REACT_APP_ENV || 'dev'],
     proxy: {
         '/api': {
-            'target': 'http://localhost:8108/',
+            'target': 'http://www.hanhuikrkr.com:8108/',
             'changeOrigin': true,
             'pathRewrite': { '^': '' }
         }

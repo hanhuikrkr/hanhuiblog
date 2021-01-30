@@ -1,11 +1,12 @@
-import { Card, Form, List, Avatar, Select, Typography } from 'antd';
+import { Card, Form, List, Avatar, Select, Typography,Tooltip } from 'antd';
 import React, { FC, useEffect } from 'react';
 import { connect, Dispatch, Link } from 'umi';
-
+import { GithubOutlined } from '@ant-design/icons';
 import { StateType } from './model';
 import { ListItemDataType } from './data.d';
 import {projectData} from '@/constant/data'
 import styles from './style.less';
+import { PageContainer } from '@ant-design/pro-layout';
 
 const { Option } = Select;
 const FormItem = Form.Item;
@@ -39,11 +40,11 @@ const ProjectPage: FC<ProjectPageProps> = ({
       }}
       dataSource={projectData}
       renderItem={(item) => (
-    <Link to={item.href}>
+    
     <List.Item>
           <Card className={styles.card} hoverable cover={<img alt={item.title} src={item.cover} />}>
             <Card.Meta
-              title={<a href={item.href}>{item.title}</a>}
+              title={<div><a href={item.href}>{item.title}</a></div>}
               description={
                 <Paragraph className={styles.item} ellipsis={{ rows: 2 }}>
                   {item.subDescription}
@@ -53,13 +54,16 @@ const ProjectPage: FC<ProjectPageProps> = ({
             <div className={styles.cardItemContent}>
               <span>{item.updatedAt}</span>
               <div className={styles.avatarList}>
+              <a style={{float:"right"}}  href={item.githref}>
+              <Tooltip title={ <GithubOutlined/>} placement="top">
               <Avatar   src="http://www.hanhuikrkr.com:7112/57887545.png" />
-
+              </Tooltip>
+             </a>
               </div>
             </div>
           </Card>
         </List.Item>
-        </Link>
+        
     
       )}
     />
@@ -73,10 +77,12 @@ const ProjectPage: FC<ProjectPageProps> = ({
   };
 
   return (
+    <PageContainer>
     <div className={styles.coverCardList}>
    
       <div className={styles.cardList}>{cardList}</div>
     </div>
+    </PageContainer>
   );
 };
 

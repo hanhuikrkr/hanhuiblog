@@ -251,6 +251,7 @@ const UserRegister: FC<UserRegisterProps> = ({
             className={styles.submit}
             type="primary"
             htmlType="submit"
+            disabled
           >
             <FormattedMessage id="useranduserregister.register.register" />
           </Button>

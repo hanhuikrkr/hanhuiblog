@@ -41,7 +41,7 @@ var request_1 = require("@/utils/request");
 function upload(params) {
     return __awaiter(this, void 0, Promise, function () {
         return __generator(this, function (_a) {
-            return [2 /*return*/, request_1["default"]('http://localhost:8108/doc/upload', {
+            return [2 /*return*/, request_1["default"]('http://www.hanhuikrkr.com:8108/doc/upload', {
                     method: 'POST',
                     data: params
                 })];
@@ -52,7 +52,7 @@ exports.upload = upload;
 function updateDoc(params) {
     return __awaiter(this, void 0, Promise, function () {
         return __generator(this, function (_a) {
-            return [2 /*return*/, request_1["default"]('http://localhost:8108/doc/updateDoc', {
+            return [2 /*return*/, request_1["default"]('http://www.hanhuikrkr.com:8108/doc/updateDoc', {
                     method: 'POST',
                     data: params
                 })];
@@ -63,7 +63,7 @@ exports.updateDoc = updateDoc;
 function Selectquery(params) {
     return __awaiter(this, void 0, Promise, function () {
         return __generator(this, function (_a) {
-            return [2 /*return*/, request_1["default"]('http://localhost:8108/doc/selectTypeToList', {
+            return [2 /*return*/, request_1["default"]('http://www.hanhuikrkr.com:8108/doc/selectTypeToList', {
                     method: 'POST',
                     data: params
                 })];
@@ -74,7 +74,7 @@ exports.Selectquery = Selectquery;
 function SelectDocData(params) {
     return __awaiter(this, void 0, Promise, function () {
         return __generator(this, function (_a) {
-            return [2 /*return*/, request_1["default"]('http://localhost:8108/doc/selectDocTextById', {
+            return [2 /*return*/, request_1["default"]('http://www.hanhuikrkr.com:8108/doc/selectDocTextById', {
                     method: 'POST',
                     data: params
                 })];
@@ -85,7 +85,7 @@ exports.SelectDocData = SelectDocData;
 function SelectAllDocList() {
     return __awaiter(this, void 0, Promise, function () {
         return __generator(this, function (_a) {
-            return [2 /*return*/, request_1["default"]('http://localhost:8108/doc/selectAllDoc', {
+            return [2 /*return*/, request_1["default"]('http://www.hanhuikrkr.com:8108/doc/selectAllDoc', {
                     method: 'POST'
                 })];
         });
@@ -96,7 +96,7 @@ exports.SelectAllDocList = SelectAllDocList;
 function DeleteOneDoc(params) {
     return __awaiter(this, void 0, Promise, function () {
         return __generator(this, function (_a) {
-            return [2 /*return*/, request_1["default"]('http://localhost:8108/doc/DeleteOneDocById', {
+            return [2 /*return*/, request_1["default"]('http://www.hanhuikrkr.com:8108/doc/DeleteOneDocById', {
                     method: 'POST',
                     data: params
                 })];

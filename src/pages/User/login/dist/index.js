@@ -61,7 +61,7 @@ var Login = function (props) {
                         prefix: react_1["default"].createElement(icons_1.UserOutlined, { className: index_less_1["default"].prefixIcon })
                     }, placeholder: intl.formatMessage({
                         id: 'pages.login.username.placeholder',
-                        defaultMessage: '用户名: admin or user'
+                        defaultMessage: '用户名: user'
                     }), rules: [
                         {
                             required: true,
@@ -73,7 +73,7 @@ var Login = function (props) {
                         prefix: react_1["default"].createElement(icons_1.LockTwoTone, { className: index_less_1["default"].prefixIcon })
                     }, placeholder: intl.formatMessage({
                         id: 'pages.login.password.placeholder',
-                        defaultMessage: '密码: ant.design'
+                        defaultMessage: '密码: user'
                     }), rules: [
                         {
                             required: true,

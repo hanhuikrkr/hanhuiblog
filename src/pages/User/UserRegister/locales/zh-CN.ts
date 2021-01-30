@@ -10,7 +10,7 @@ export default {
   'useranduserregister.login.sign-in-with': '其他登录方式',
   'useranduserregister.login.signup': '注册账户',
   'useranduserregister.login.login': '登录',
-  'useranduserregister.register.register': '注册',
+  'useranduserregister.register.register': '尚未开放注册',
   'useranduserregister.register.get-verification-code': '获取验证码',
   'useranduserregister.register.sign-in': '使用已有账户登录',
   'useranduserregister.register-result.msg': '你的账户：{email} 注册成功',

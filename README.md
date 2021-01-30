@@ -1,6 +1,6 @@
 # Hanhui Blog
 
-This project is  [Hanhui Blog](https://http://www.hanhuikrkr.com). Follow is the quick guide for how to use.
+This project is  [Hanhui Blog](http://www.hanhuikrkr.com). Follow is the quick guide for how to use.
 
 ## Environment Prepare
 

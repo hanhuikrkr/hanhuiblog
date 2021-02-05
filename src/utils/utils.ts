@@ -22,3 +22,7 @@ export const isAntDesignProOrDev = (): boolean => {
 };
 
 export const getPageQuery = () => parse(window.location.href.split('?')[1]);
+export const createHash =(hashLength:number)=> {
+  　　// 默认长度 24
+      return Array.from(Array(Number(hashLength) || 24), () => Math.floor(Math.random() * 36).toString(36)).join('');
+  }

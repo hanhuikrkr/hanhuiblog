@@ -133,9 +133,6 @@ exports["default"] = (function (props) {
             }
         });
     }); };
-    var fakeInit = {
-        docpicab: '1111'
-    };
     return (React.createElement(React.Fragment, null,
         React.createElement(antd_1.Form, { form: form, name: "basic", onFinish: onFinish, onFinishFailed: onFinishFailed, className: index_less_1["default"].uploaderFrom },
             React.createElement(antd_1.Form.Item, { name: "doctype", noStyle: true },

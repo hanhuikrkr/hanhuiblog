@@ -15,7 +15,8 @@ const proSettings: DefaultSettings = {
   colorWeak: false,
   title: 'Hanhui Blog',
   pwa: false,
-  iconfontUrl: '',
+  iconfontUrl: '//at.alicdn.com/t/font_2345593_3h92c37wn6k.js',
+  
 };
 
 export type { DefaultSettings };

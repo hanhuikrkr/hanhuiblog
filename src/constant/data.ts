@@ -1,4 +1,7 @@
+import {createHash} from '@/utils/utils'
+
 //色彩管理
+
 export var colorIndex = [
   '#2ae0c8',
   '#a2e1d4',
@@ -50,71 +53,74 @@ export var docTypeOption = [
     // 110000
     value: '11',
     label: 'JavaScript',
+  
+
     children: [
       {
         value: '0100',
         label: 'JS 中万物皆对象',
-
+        
+        
       },
       {
         value: '0200',
         label: '原型与继承',
-
+    
       },
       {
         value: '0300',
         label: 'proxy代理',
-
+    
       },
       {
         value: '0400',
         label: '基本引用类型',
-
+      
       },
       {
         value: '0500',
         label: '基础知识',
-
+   
       },
       {
         value: '0600',
         label: '迭代器与生成器',
-
+       
       },
       {
         value: '0700',
         label: 'Promise与async',
-
+       
       },
       {
         value: '0800',
         label: '模块',
-
+        
       },
       {
         value: '0900',
         label: 'BOM和DOM傻傻分不清',
-
+     
       },
       {
         value: '1000',
         label: 'JS里的坑',
-
+    
       },
       {
         value: '1100',
         label: '手写时间',
-
+       
       },
       {
         value: '1200',
         label: '网络请求',
-
+       
       },
       {
         value: '1300',
         label: '事件',
-
+       
       },
 
     ],
@@ -123,6 +129,7 @@ export var docTypeOption = [
     // 120000
     value: '12',
     label: '计算机网络',
+    icon:'icon-network',
     children: [
       {
         value: '01',
@@ -288,9 +295,11 @@ export var docTypeOption = [
 
   },
   {
-    value: '990000',
+    name,value: '990000',
+    icon:'icon-lvyou',
     label: '随手记',
-
+    sort:990000,
+    component: './DocList',
   },
 ];
 export let projectData = [{

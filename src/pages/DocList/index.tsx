@@ -1,9 +1,9 @@
 import Doclist from './Doclist';
-export default function(props: { location: any }) {
- 
+export default function(props: { route: any }) {
+ console.log(props.route)
   return (
     <div>
-      <Doclist location={props.location.query} />
+      <Doclist location={props.route} />
    
     </div>
   );

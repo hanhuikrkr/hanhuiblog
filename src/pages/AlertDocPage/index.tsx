@@ -96,9 +96,7 @@ export default (props: any) => {
       pathname: '/welcome',
     });
   };
-  const fakeInit = {
-    docpicab: '1111',
-  };
+
 
   return (
     <>

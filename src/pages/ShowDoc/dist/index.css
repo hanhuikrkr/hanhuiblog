@@ -5,6 +5,14 @@
   background-color: rgba(255, 255, 255, 0.8);
   padding: 40px;
 }
+.textContainer img {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  max-width: 90%;
+  align-self: center;
+  vertical-align: middle;
+}
 .text {
   margin: 0 auto;
   max-width: 1200px;

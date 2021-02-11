@@ -57,7 +57,6 @@ var doc_ts_2 = require("@/services/doc.ts");
 var mdParser = new markdown_it_1["default"]({
     highlight: function (str, lang) {
         if (lang && hljs.getLanguage(lang)) {
-            console.log(lang);
             try {
                 return '<pre class="hljs"><code>' + hljs.highlight(lang, str, true).value + '</code></pre>';
             }
@@ -85,7 +84,6 @@ exports["default"] = (function (props) {
         doc_ts_2.SelectDocData(props.location.query).then(function (r) {
             if (r)
                 if (r.code == 200) {
-                    console.log(r.data);
                     setText(r.data.doctext);
                     form.setFieldsValue({
                         doctitle: r.data.doctitle,
@@ -97,7 +95,6 @@ exports["default"] = (function (props) {
     }, [props.location]);
     var handleEditorChange = function (_a) {
         var html = _a.html, text = _a.text;
-        console.log(text);
         setText(text);
     };
     var onFinish = function (values) { return __awaiter(void 0, void 0, void 0, function () {
@@ -105,7 +102,6 @@ exports["default"] = (function (props) {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    console.log(values);
                     params = {
                         iddoc: props.location.query.iddoc,
                         doctext: values.doctext.text,
@@ -115,11 +111,9 @@ exports["default"] = (function (props) {
                         docathorname: '韩麾',
                         doctype: parseInt(values.doctype.join(''))
                     };
-                    console.log('Success:', params);
                     return [4 /*yield*/, doc_ts_1.updateDoc(params)];
                 case 1:
                     r = _a.sent();
-                    console.log(r);
                     if (r.code == 200) {
                         antd_1.notification.success({
                             message: '博客上传成功',

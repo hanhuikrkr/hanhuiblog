@@ -111,7 +111,6 @@ var UserModel = {
                             })];
                     case 2:
                         _c.sent();
-                        console.log(response);
                         // Login successfully
                         if (response.status === 'ok') {
                             token_1.saveUser(response);

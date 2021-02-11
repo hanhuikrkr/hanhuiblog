@@ -18,7 +18,6 @@ exports["default"] = (function () {
         doc_1.SelectAllDocList().then(function (r) {
             if (r)
                 if (r.code == 200) {
-                    console.log(r.data);
                     setData(r.data);
                 }
         });
@@ -29,7 +28,6 @@ exports["default"] = (function () {
             doc_1.SelectAllDocList().then(function (r) {
                 if (r)
                     if (r.code == 200) {
-                        console.log(r.data);
                         setData(r.data);
                     }
             });

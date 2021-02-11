@@ -37,12 +37,6 @@ const filter = (inputValue: any, path: any) => {
   );
 };
 
-function onChange(value: any) {
-
-
-  
- 
-}
 const dropdownRender = (menus: React.ReactNode) => {
   return (
     <div id={'test'} className={styles.dropdownClass}>
@@ -51,7 +45,7 @@ const dropdownRender = (menus: React.ReactNode) => {
   );
 };
 const onFinish = async (values: any) => {
-  console.log(values);
+
   
   let params:UploadProps={
     doctext:values.doctext.text,
@@ -62,9 +56,9 @@ const onFinish = async (values: any) => {
     doctype:parseInt(values.doctype.join(''))
   }
 
-  console.log('Success:', params);
+
   let r =await upload(params);
-  console.log(r);
+
   if (r.code==200){
     notification.success({
       message: '博客上传成功',
@@ -94,7 +88,7 @@ export default (props: any) => {
         <Cascader
         className={styles.dropdownCascader}
           options={docTypeOption}
-          onChange={onChange}
+       
           placeholder="请选择主题"
           dropdownRender={dropdownRender}
         

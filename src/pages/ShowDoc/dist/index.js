@@ -13,7 +13,6 @@ var index_less_1 = require("./index.less");
 var mdParser = new markdown_it_1["default"]({
     highlight: function (str, lang) {
         if (lang && hljs.getLanguage(lang)) {
-            console.log(lang);
             try {
                 return '<pre class="hljs"><code>' + hljs.highlight(lang, str, true).value + '</code></pre>';
             }
@@ -24,12 +23,10 @@ var mdParser = new markdown_it_1["default"]({
 });
 exports["default"] = (function (props) {
     var _a = react_1.useState(''), text = _a[0], setText = _a[1];
-    console.log(props);
     react_2.useEffect(function () {
         doc_ts_1.SelectDocData(props.location.query).then(function (r) {
             if (r)
                 if (r.code == 200) {
-                    console.log(r);
                     setText(r.data.doctext);
                 }
         });

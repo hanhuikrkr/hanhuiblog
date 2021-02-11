@@ -20,7 +20,7 @@ import { SelectDocData } from '@/services/doc.ts';
 const mdParser = new MarkdownIt({
   highlight: function (str, lang) {
     if (lang && hljs.getLanguage(lang)) {
-      console.log(lang);
+
       try {
         return '<pre class="hljs"><code>' + hljs.highlight(lang, str, true).value + '</code></pre>';
       } catch (__) {}
@@ -56,7 +56,7 @@ export default (props: any) => {
     SelectDocData(props.location.query).then((r) => {
       if (r)
         if (r.code == 200) {
-          console.log(r.data);
+  
           setText(r.data.doctext);
           form.setFieldsValue({
             doctitle: r.data.doctitle,
@@ -67,11 +67,11 @@ export default (props: any) => {
     });
   }, [props.location]);
   const handleEditorChange = ({ html, text }: any) => {
-    console.log(text);
+
     setText(text);
   };
   const onFinish = async (values: any) => {
-    console.log(values);
+
 
     let params: UploadProps = {
       iddoc: props.location.query.iddoc,
@@ -83,9 +83,9 @@ export default (props: any) => {
       doctype: parseInt(values.doctype.join('')),
     };
 
-    console.log('Success:', params);
+
     let r = await updateDoc(params);
-    console.log(r);
+  
     if (r.code == 200) {
       notification.success({
         message: '博客上传成功',

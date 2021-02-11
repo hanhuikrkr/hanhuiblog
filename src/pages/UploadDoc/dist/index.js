@@ -72,8 +72,6 @@ var filter = function (inputValue, path) {
         return option.label.toLowerCase().indexOf(inputValue.toLowerCase()) > -1;
     });
 };
-function onChange(value) {
-}
 var dropdownRender = function (menus) {
     return (React.createElement("div", { id: 'test', className: index_less_1["default"].dropdownClass }, menus));
 };
@@ -82,7 +80,6 @@ var onFinish = function (values) { return __awaiter(void 0, void 0, void 0, func
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
-                console.log(values);
                 params = {
                     doctext: values.doctext.text,
                     docab: values.docab,
@@ -91,11 +88,9 @@ var onFinish = function (values) { return __awaiter(void 0, void 0, void 0, func
                     docathorname: '韩麾',
                     doctype: parseInt(values.doctype.join(''))
                 };
-                console.log('Success:', params);
                 return [4 /*yield*/, doc_ts_1.upload(params)];
             case 1:
                 r = _a.sent();
-                console.log(r);
                 if (r.code == 200) {
                     antd_1.notification.success({
                         message: '博客上传成功',
@@ -116,7 +111,7 @@ exports["default"] = (function (props) {
     return (React.createElement(React.Fragment, null,
         React.createElement(antd_1.Form, { name: "basic", onFinish: onFinish, onFinishFailed: onFinishFailed, className: index_less_1["default"].uploaderFrom },
             React.createElement(antd_1.Form.Item, { name: "doctype", noStyle: true },
-                React.createElement(antd_1.Cascader, { className: index_less_1["default"].dropdownCascader, options: data_1.docTypeOption, onChange: onChange, placeholder: "\u8BF7\u9009\u62E9\u4E3B\u9898", dropdownRender: dropdownRender, showSearch: { filter: filter, matchInputWidth: true } })),
+                React.createElement(antd_1.Cascader, { className: index_less_1["default"].dropdownCascader, options: data_1.docTypeOption, placeholder: "\u8BF7\u9009\u62E9\u4E3B\u9898", dropdownRender: dropdownRender, showSearch: { filter: filter, matchInputWidth: true } })),
             React.createElement(antd_1.Form.Item, { name: "doctitle", noStyle: true },
                 React.createElement(antd_1.Input, { className: index_less_1["default"].dropdownCascader, placeholder: "\u8BF7\u8F93\u5165\u6807\u9898" })),
             React.createElement(antd_1.Form.Item, { name: "docab", noStyle: true },

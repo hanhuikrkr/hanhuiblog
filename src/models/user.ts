@@ -84,7 +84,7 @@ const UserModel: UserModelType = {
         type: 'changeLoginStatus',
         payload: response,
       });
-      console.log(response)
+
       // Login successfully
       if (response.status === 'ok') {
         saveUser(response)

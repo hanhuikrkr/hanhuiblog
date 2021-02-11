@@ -59,68 +59,68 @@ export var docTypeOption = [
       {
         value: '0100',
         label: 'JS 中万物皆对象',
-        
+        children:[]
         
       },
       {
         value: '0200',
         label: '原型与继承',
-    
+        children:[]
       },
       {
         value: '0300',
         label: 'proxy代理',
-    
+        children:[]
       },
       {
         value: '0400',
         label: '基本引用类型',
-      
+        children:[]
       },
       {
         value: '0500',
         label: '基础知识',
-   
+        children:[]
       },
       {
         value: '0600',
         label: '迭代器与生成器',
-       
+        children:[]
       },
       {
         value: '0700',
         label: 'Promise与async',
-       
+        children:[]
       },
       {
         value: '0800',
         label: '模块',
-        
+        children:[]
       },
       {
         value: '0900',
         label: 'BOM和DOM傻傻分不清',
-     
+        children:[]
       },
       {
         value: '1000',
         label: 'JS里的坑',
-    
+        children:[]
       },
       {
         value: '1100',
         label: '手写时间',
-       
+        children:[]
       },
       {
         value: '1200',
         label: '网络请求',
-       
+        children:[]
       },
       {
         value: '1300',
         label: '事件',
-       
+        children:[]
       },
 
     ],
@@ -138,48 +138,50 @@ export var docTypeOption = [
           {
             value: '01',
             label: 'http本身',
+            children:[]
           }, {
             value: '02',
             label: 'Ajax 解决浏览器缓存问题',
+            children:[]
           }, {
             value: '03',
-            label: '常见状态码',
+            label: '常见状态码', children:[]
           }, {
             value: '04',
-            label: 'http方法',
+            label: 'http方法', children:[]
           }, {
             value: '05',
-            label: 'GET和POST的区别',
+            label: 'GET和POST的区别', children:[]
           }, {
             value: '06',
-            label: 'Request/response',
+            label: 'Request/response', children:[]
           },
           {
             value: '07',
-            label: 'Web缓存',
+            label: 'Web缓存', children:[]
           },
           {
             value: '08',
-            label: 'HTTP 2.0',
+            label: 'HTTP 2.0', children:[]
           },
           {
             value: '09',
-            label: 'HTTPS & TLS',
+            label: 'HTTPS & TLS', children:[]
           },
         ],
 
       },
       {
         value: '0500',
-        label: 'CDN缓存'
+        label: 'CDN缓存', children:[]
       },
       {
         value: '0400',
-        label: 'DNS'
+        label: 'DNS', children:[]
       },
       {
         value: '0200',
-        label: '基础知识'
+        label: '基础知识', children:[]
       },
       {
         value: '03',
@@ -187,26 +189,26 @@ export var docTypeOption = [
         children: [
           {
             value: '01',
-            label: 'TCP报文结构',
+            label: 'TCP报文结构', children:[]
           }, {
             value: '02',
-            label: '可靠数据传输原理',
+            label: '可靠数据传输原理', children:[]
           }, {
             value: '03',
-            label: '流量控制',
+            label: '流量控制', children:[]
           }, {
             value: '04',
-            label: '拥塞控制',
+            label: '拥塞控制', children:[]
           }, {
             value: '05',
-            label: 'TCP 保证可靠性',
+            label: 'TCP 保证可靠性', children:[]
           }, {
             value: '06',
-            label: 'TCP 为什么四次挥手',
+            label: 'TCP 为什么四次挥手', children:[]
           },
           {
             value: '07',
-            label: 'TCP 握手为什么 3 次',
+            label: 'TCP 握手为什么 3 次', children:[]
           },
 
 
@@ -219,7 +221,7 @@ export var docTypeOption = [
 // 130000
     value: '130000',
     label: 'HTML',
-
+    children:[]
   },
   {
 // 140000
@@ -227,7 +229,7 @@ export var docTypeOption = [
     label: '基础知识',
     children: [{
       value: '0100',
-      label: '正则表达式',
+      label: '正则表达式', children:[]
     }]
 
   },
@@ -237,28 +239,28 @@ export var docTypeOption = [
     label: '浏览器',
     children: [{
       value: '0100',
-      label: 'Event loop',
+      label: 'Event loop', children:[]
     }, {
       value: '0200',
-      label: '原生事件',
+      label: '原生事件', children:[]
     }, {
       value: '0300',
-      label: ' Cookie-Session 、Jwt 两种身份认证机制',
+      label: ' Cookie-Session 、Jwt 两种身份认证机制', children:[]
     }, {
       value: '0400',
-      label: 'Service Worker',
+      label: 'Service Worker', children:[]
     }, {
       value: '0500',
-      label: '渲染机制',
+      label: '渲染机制', children:[]
     }, {
       value: '0600',
-      label: '跨域',
+      label: '跨域', children:[]
     }, {
       value: '0700',
-      label: '前端路由',
+      label: '前端路由', children:[]
     }, {
       value: '0800',
-      label: '几种方式实现存储功能',
+      label: '几种方式实现存储功能', children:[]
     },]
 
   },
@@ -268,30 +270,30 @@ export var docTypeOption = [
     label: 'css',
     children: [{
       value: '0100',
-      label: '常见问题',
+      label: '常见问题', children:[]
     }, {
       value: '02',
       label: '基础知识',
       children: [
         {
           value: '01',
-          label: '定位',
+          label: '定位', children:[]
         }, {
           value: '02',
-          label: '动画',
+          label: '动画', children:[]
         }, {
           value: '03',
-          label: '布局',
+          label: '布局', children:[]
         }, {
           value: '04',
-          label: '盒模型',
+          label: '盒模型', children:[]
         }]
     }]
 
   },
   {
     value: '980000',
-    label: '算法',
+    label: '算法', children:[]
 
   },
   {
@@ -299,7 +301,7 @@ export var docTypeOption = [
     icon:'icon-lvyou',
     label: '随手记',
     sort:990000,
-    component: './DocList',
+    component: './DocList', children:[]
   },
 ];
 export let projectData = [{

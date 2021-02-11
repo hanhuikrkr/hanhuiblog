@@ -12,7 +12,7 @@ import styles from './index.less'
 const mdParser = new MarkdownIt({
   highlight: function (str, lang) {
     if (lang && hljs.getLanguage(lang)) {
-      console.log(lang);
+
       try {
         return '<pre class="hljs"><code>' + hljs.highlight(lang, str, true).value + '</code></pre>';
       } catch (__) {}
@@ -24,12 +24,12 @@ const mdParser = new MarkdownIt({
 
 export default (props: any) => {
   const [text, setText] = useState('');
-  console.log(props);
+
   useEffect(() => {
     SelectDocData(props.location.query).then((r) => {
       if (r)
         if (r.code == 200) {
-          console.log(r);
+
           setText(r.data.doctext);
         }
     });

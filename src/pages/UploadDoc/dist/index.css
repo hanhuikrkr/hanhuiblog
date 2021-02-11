@@ -1,10 +1,15 @@
 .dropdownClass {
-  width: 80vw;
+  width: 40vw;
   height: 600px;
   background-color: #ffffff;
   align-self: center;
   align-items: center;
   margin: 0 auto;
+}
+@media screen and (max-width: 1000px) {
+  .dropdownClass {
+    width: 80vw;
+  }
 }
 .dropdownCascader {
   width: 48%;

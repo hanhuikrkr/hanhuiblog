@@ -26,7 +26,7 @@ export default () => {
     SelectAllDocList().then((r) => {
       if (r)
       if (r.code == 200) {
-        console.log(r.data)
+
         setData(r.data)
         
       }
@@ -38,7 +38,7 @@ let params={iddoc:param}
       SelectAllDocList().then((r) => {
         if (r)
         if (r.code == 200) {
-          console.log(r.data)
+
           setData(r.data)
           
         }

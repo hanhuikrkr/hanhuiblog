@@ -20,7 +20,8 @@ exports["default"] = (function (props) {
     return (react_1["default"].createElement(pro_layout_1.PageContainer, null,
         react_1["default"].createElement("div", { className: index_less_1["default"].g_listContainer },
             react_1["default"].createElement("div", { id: "components-list-demo-vertical" },
-                react_1["default"].createElement(antd_1.List, { itemLayout: "vertical", size: "large", dataSource: listData, footer: react_1["default"].createElement("div", { style: { textAlign: 'center' } }), renderItem: function (item) { return (react_1["default"].createElement(antd_1.List.Item, { key: item.iddoc + item.doctitle, extra: react_1["default"].createElement("img", { width: 170, style: { maxHeight: "140px" }, alt: "logo", src: item.docpicab }) },
+                react_1["default"].createElement(antd_1.List, { itemLayout: "vertical", size: "large", dataSource: listData, footer: react_1["default"].createElement("div", { style: { textAlign: 'center' } }), renderItem: function (item) { return (react_1["default"].createElement(antd_1.List.Item, { key: item.iddoc + item.doctitle, extra: react_1["default"].createElement("div", { style: { width: "240px" } },
+                            react_1["default"].createElement("img", { height: "140px", style: { maxWidth: "240px" }, alt: "logo", src: item.docpicab })) },
                         react_1["default"].createElement(antd_1.List.Item.Meta, { avatar: react_1["default"].createElement(antd_1.Avatar, { src: "http://www.hanhuikrkr.com:7112/57887545.png" }), title: react_1["default"].createElement(umi_1.Link, { to: "/showdoc?iddoc=" + item.iddoc }, item.doctitle), description: item.doctime.toLocaleString().replace("T", " ").slice(0, -5) }),
                         item.docab)); } })))));
 });

@@ -50,7 +50,7 @@ export default (props: { location: any }) => {
           renderItem={(item) => (
             <List.Item
               key={item.iddoc + item.doctitle}
-              extra={<img width={170} style={{maxHeight:"140px"}} alt="logo" src={item.docpicab} />}
+              extra={<div style={{width:"240px"}}><img  height="140px" style={{maxWidth:"240px"}} alt="logo" src={item.docpicab} /></div>}
             >
               <List.Item.Meta
                 avatar={<Avatar src="http://www.hanhuikrkr.com:7112/57887545.png" />}

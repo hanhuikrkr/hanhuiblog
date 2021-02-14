@@ -26,3 +26,6 @@ export const createHash =(hashLength:number)=> {
   　　// 默认长度 24
       return Array.from(Array(Number(hashLength) || 24), () => Math.floor(Math.random() * 36).toString(36)).join('');
   }
+  export const clone=(e:any)=> {
+    return JSON.parse(JSON.stringify(e))
+  }

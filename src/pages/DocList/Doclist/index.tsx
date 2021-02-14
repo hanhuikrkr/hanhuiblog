@@ -50,12 +50,12 @@ export default (props: { location: any }) => {
           renderItem={(item) => (
             <List.Item
               key={item.iddoc + item.doctitle}
-              extra={<img width={170} alt="logo" src={item.docpicab} />}
+              extra={<img width={170} style={{maxHeight:"140px"}} alt="logo" src={item.docpicab} />}
             >
               <List.Item.Meta
                 avatar={<Avatar src="http://www.hanhuikrkr.com:7112/57887545.png" />}
                 title={<Link to={`/showdoc?iddoc=${item.iddoc}`}>{item.doctitle}</Link>}
-                description={item.doctime}
+                description={item.doctime.toLocaleString().replace("T"," ").slice(0,-5)}
               />
               {item.docab}
             </List.Item>

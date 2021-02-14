@@ -73,6 +73,11 @@ export var docTypeOption = [
         children:[]
       },
       {
+        value: '1400',
+        label: '函数',
+        children:[]
+      },
+      {
         value: '0400',
         label: '基本引用类型',
         children:[]

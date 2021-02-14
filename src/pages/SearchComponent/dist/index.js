@@ -9,6 +9,7 @@ var icons_1 = require("@ant-design/icons");
 var data_1 = require("../../constant/data");
 var umi_1 = require("umi");
 var doc_1 = require("@/services/doc");
+var utils_1 = require("@/utils/utils");
 var dropdownRender = function (menus) {
     return (react_1["default"].createElement("div", { id: 'test', className: index_less_1["default"].dropdownClass }, menus));
 };
@@ -28,7 +29,8 @@ exports["default"] = (function () {
         doc_1.SelectAllDocList().then(function (r) {
             if (r)
                 if (r.code == 200) {
-                    data_1.docTypeOption.map(function (item, index) {
+                    var docDataBackUp = utils_1.clone(data_1.docTypeOption);
+                    docDataBackUp.map(function (item, index) {
                         if (item.children.length === 0) {
                             for (var j = 0, len = r.data.length; j < len; j++) {
                                 if (r.data[j].doctype == item.value) {
@@ -74,7 +76,7 @@ exports["default"] = (function () {
                         }
                     });
                     // console.log(docTypeOption);
-                    setData(data_1.docTypeOption);
+                    setData(docDataBackUp);
                 }
         });
     }, []);

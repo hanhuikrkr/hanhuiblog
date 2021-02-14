@@ -8,6 +8,7 @@ import { UserOutlined, SearchOutlined } from '@ant-design/icons';
 import { docTypeOption } from '../../constant/data';
 import { history } from 'umi';
 import { SelectAllDocList } from '@/services/doc';
+import {clone}from '@/utils/utils'
 export interface dataItem {
   iddoc: number;
   doctitle: string;
@@ -42,8 +43,8 @@ export default () => {
       if (r)
         if (r.code == 200) {
 
-
-          docTypeOption.map((item, index) => {
+          let docDataBackUp=clone(docTypeOption)
+          docDataBackUp.map((item, index) => {
             if (item.children.length === 0) {
               for (let j = 0, len = r.data.length; j < len; j++) {
                 if (r.data[j].doctype == item.value) {
@@ -97,7 +98,7 @@ export default () => {
             }
           });
           // console.log(docTypeOption);
-          setData(docTypeOption);
+          setData(docDataBackUp);
         }
     });
   }, []);

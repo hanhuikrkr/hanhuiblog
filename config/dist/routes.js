@@ -99,6 +99,12 @@ exports["default"] = [
                                         path: createHash(24)
                                     },
                                     {
+                                        name: '函数',
+                                        sort: 111400,
+                                        component: './DocList',
+                                        path: createHash(24)
+                                    },
+                                    {
                                         name: '基本引用类型',
                                         sort: 110400,
                                         component: './DocList',
@@ -148,7 +154,7 @@ exports["default"] = [
                                     },
                                     {
                                         name: '网络请求',
-                                        sort: 1101200,
+                                        sort: 111200,
                                         component: './DocList',
                                         path: createHash(24)
                                     },

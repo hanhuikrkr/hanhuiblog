@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.createHash = exports.getPageQuery = exports.isAntDesignProOrDev = exports.isAntDesignPro = exports.isUrl = void 0;
+exports.clone = exports.createHash = exports.getPageQuery = exports.isAntDesignProOrDev = exports.isAntDesignPro = exports.isUrl = void 0;
 var querystring_1 = require("querystring");
 /* eslint no-useless-escape:0 import/prefer-default-export:0 */
 var reg = /(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+(?::\d+)?|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/;
@@ -23,4 +23,7 @@ exports.getPageQuery = function () { return querystring_1.parse(window.location.
 exports.createHash = function (hashLength) {
     // 默认长度 24
     return Array.from(Array(Number(hashLength) || 24), function () { return Math.floor(Math.random() * 36).toString(36); }).join('');
+};
+exports.clone = function (e) {
+    return JSON.parse(JSON.stringify(e));
 };

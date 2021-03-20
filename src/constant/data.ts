@@ -316,6 +316,15 @@ export let projectData = [{
   githref: "https://github.com/hanhuikrkr/hanhuiblog",
   cover: "http://hanhuikrkr.com:7112/hanhuiblog84.png",
   subDescription: "采用umi构建的个人的学习博客网站",
-  updatedAt: "2021年1月30日",
+  updatedAt: "2021年3月20日",
   href: "/"
+},{
+  id: "2",
+  owner: "韩麾",
+  title: "毕业论文管理系统",
+  githref: "https://github.com/quanta2015/FinalDoc",
+  cover: "http://www.hanhuikrkr.com:8070/8dc5657b840f001ab30fb909d81b6b63.svg",
+  subDescription: "采用Preact构建，学生教师主任共用的毕业论文管理系统。统包括毕业论文相关的所有线下过程,包括选题申请、任务书下发审核、进度管理以及答辩安排等,实现毕业论文管理的信息化。",
+  updatedAt: "2020年9月5日",
+  href: "http://www.hanhuikrkr.com:8060/"
 }]

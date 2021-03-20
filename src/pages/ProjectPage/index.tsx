@@ -42,11 +42,11 @@ const ProjectPage: FC<ProjectPageProps> = ({
       renderItem={(item) => (
     
     <List.Item>
-          <Card className={styles.card} hoverable cover={<img alt={item.title} src={item.cover} />}>
+          <Card className={styles.card} hoverable cover={<img style={{height:"400px",objectFit:"cover"}} alt={item.title} src={item.cover} />}>
             <Card.Meta
               title={<div><a href={item.href}>{item.title}</a></div>}
               description={
-                <Paragraph className={styles.item} ellipsis={{ rows: 2 }}>
+                <Paragraph className={styles.item} ellipsis={{ rows: 3 }}>
                   {item.subDescription}
                 </Paragraph>
               }

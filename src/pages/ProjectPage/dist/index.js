@@ -22,9 +22,9 @@ var ProjectPage = function (_a) {
             xl: 4,
             xxl: 4
         }, dataSource: data_1.projectData, renderItem: function (item) { return (react_1["default"].createElement(antd_1.List.Item, null,
-            react_1["default"].createElement(antd_1.Card, { className: style_less_1["default"].card, hoverable: true, cover: react_1["default"].createElement("img", { alt: item.title, src: item.cover }) },
+            react_1["default"].createElement(antd_1.Card, { className: style_less_1["default"].card, hoverable: true, cover: react_1["default"].createElement("img", { style: { height: "400px", objectFit: "cover" }, alt: item.title, src: item.cover }) },
                 react_1["default"].createElement(antd_1.Card.Meta, { title: react_1["default"].createElement("div", null,
-                        react_1["default"].createElement("a", { href: item.href }, item.title)), description: react_1["default"].createElement(Paragraph, { className: style_less_1["default"].item, ellipsis: { rows: 2 } }, item.subDescription) }),
+                        react_1["default"].createElement("a", { href: item.href }, item.title)), description: react_1["default"].createElement(Paragraph, { className: style_less_1["default"].item, ellipsis: { rows: 3 } }, item.subDescription) }),
                 react_1["default"].createElement("div", { className: style_less_1["default"].cardItemContent },
                     react_1["default"].createElement("span", null, item.updatedAt),
                     react_1["default"].createElement("div", { className: style_less_1["default"].avatarList },

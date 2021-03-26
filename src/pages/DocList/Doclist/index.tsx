@@ -32,6 +32,10 @@ export default (props: { location: any }) => {
       }
     });
   }, [props.location]);
+  const onImgError=(e:any)=>{
+    console.log(e)
+    e.target.src="http://www.hanhuikrkr.com:7112/404.jpg"
+  }
   return (
     <PageContainer>
 
@@ -50,7 +54,7 @@ export default (props: { location: any }) => {
           renderItem={(item) => (
             <List.Item
               key={item.iddoc + item.doctitle}
-              extra={<div style={{width:"240px"}}><img  height="140px" style={{maxWidth:"240px"}} alt="logo" src={item.docpicab} /></div>}
+              extra={<div style={{width:"240px"}}><img  height="140px" style={{ width:"240px",objectFit:"cover",objectPosition:" left 0px top -20px"}} alt="logo" src={item.docpicab || "http://www.hanhuikrkr.com:7112/404.jpg"} onError={onImgError} /></div>}
             >
               <List.Item.Meta
                 avatar={<Avatar src="http://www.hanhuikrkr.com:7112/57887545.png" />}

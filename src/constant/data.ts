@@ -350,10 +350,90 @@ export var docTypeOption = [
     ],
   },
   {
+    // 200000
+    value: '20',
+
+    label: '优化',
+
+    children: [
+      {
+        value: '0100',
+        label: '常见问题',
+        children: [],
+      },
+      {
+        value: '0200',
+        label: '网络优化',
+        children: [],
+      },
+      {
+        value: '0300',
+        label: '缓存优化',
+        children: [],
+      },
+      {
+        value: '0400',
+        label: '前端渲染',
+        children: [],
+      },
+      {
+        value: '0500',
+        label: '服务响应',
+        children: [],
+      },
+      {
+        value: '0600',
+        label: '资源请求',
+        children: [],
+      },
+      {
+        value: '0700',
+        label: '预加载',
+        children: [],
+      },
+    ],
+  },
+  {
     // 210000
     value: '210000',
     label: 'NodeJS',
-    children: [],
+    children: [
+      {
+        value: '0100',
+        label: '常见问题',
+        children: [],
+      },
+      {
+        value: '0200',
+        label: '基础知识',
+        children: [],
+      },
+      {
+        value: '0300',
+        label: '异步I/O',
+        children: [],
+      },
+      {
+        value: '0400',
+        label: '异步编程',
+        children: [],
+      },
+      {
+        value: '0500',
+        label: '内存控制',
+        children: [],
+      },
+      {
+        value: '0600',
+        label: '网络编程',
+        children: [],
+      },
+      {
+        value: '0700',
+        label: 'web开发',
+        children: [],
+      },
+    ],
   },
   {
     // 220000
@@ -380,6 +460,31 @@ export var docTypeOption = [
         label: 'Hooks',
         children: [],
       },
+      {
+        value: '0500',
+        label: 'ReactDom',
+        children: [],
+      },
+      {
+        value: '0600',
+        label: '事件机制',
+        children: [],
+      },
+      {
+        value: '0700',
+        label: '样式处理',
+        children: [],
+      },
+      {
+        value: '0800',
+        label: '组件',
+        children: [],
+      },
+      {
+        value: '0900',
+        label: '源码解析',
+        children: [],
+      },
     ],
   },
   {
@@ -389,7 +494,6 @@ export var docTypeOption = [
   },
 
   {
-    name,
     value: '990000',
     icon: 'icon-lvyou',
     label: '随手记',

@@ -54,7 +54,7 @@ export default (props: { location: any }) => {
           renderItem={(item) => (
             <List.Item
               key={item.iddoc + item.doctitle}
-              extra={<div style={{ width:"240px"}}><img  height="200px" style={{marginLeft:"30px", width:"200px",objectFit:"cover",objectPosition:" left 0px top -15px"}} alt="logo" src={item.docpicab || "http://www.hanhuikrkr.com:7112/404.jpg"} onError={onImgError} /></div>}
+              extra={<div style={{ width:"240px"}}><img  className={styles.ex_img} alt="logo" src={item.docpicab || "http://www.hanhuikrkr.com:7112/404.jpg"} onError={onImgError} /></div>}
             >
               <List.Item.Meta
                 avatar={<Avatar src="http://www.hanhuikrkr.com:7112/57887545.png" />}

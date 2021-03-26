@@ -1,5 +1,22 @@
-.g_listContainer{
-    background-color: white;
-    padding: 40px;
-    min-height: 60vh;
+.g_listContainer {
+  background-color: white;
+  padding: 40px;
+  min-height: 60vh;
+}
+
+.ex_img {
+  height: 200px;
+  width: 200px;
+  margin-left: 30px;
+  object-fit: cover;
+  object-position: left 0px top -15px;
+  transition: 1s;
+  filter: blur(2px) sepia(50%);
+  opacity: 0.5;
+
+  &:hover {
+    object-position: left 100% top -15px;
+    filter: blur(0px) sepia(00%);
+    opacity: 1;
+  }
 }

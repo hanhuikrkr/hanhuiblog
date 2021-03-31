@@ -31,7 +31,6 @@ var mdParser = new markdown_it_1["default"]({
         }
         return '<pre class="hljs"><code>' + mdParser.utils.escapeHtml(str) + '</code></pre>';
     },
-    html: true,
     linkify: true,
     typographer: true
 })

@@ -32,7 +32,7 @@ const mdParser = new MarkdownIt({
 
     return '<pre class="hljs"><code>' + mdParser.utils.escapeHtml(str) + '</code></pre>';
   },
-  html: true,
+
   linkify: true,
   typographer: true
 })

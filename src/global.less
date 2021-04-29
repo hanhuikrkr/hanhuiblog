@@ -4,6 +4,7 @@ html,
 body,
 #root {
   height: 100%;
+  background: url(https://www.alicesoft.com/haharanman/common/img/index/bg_about_right.png) no-repeat 100% 0 !important;
 }
 
 .colorWeak {
@@ -11,11 +12,25 @@ body,
 }
 
 .ant-layout {
-  min-height: 100vh;
+  background-color: #ffffff00 !important;
 }
+
+.ant-layout-content {
+
+  margin: 0px !important;
+  padding: 24px;
+}
+
+.ant-page-header,
+.ant-pro-page-container-warp {
+  background-color: #f8e9ef31 !important;
+
+}
+
 .ant-cascader-menu {
   height: 600px !important;
 }
+
 canvas {
   display: block;
 }
@@ -35,12 +50,15 @@ ol {
   .ant-table {
     width: 100%;
     overflow-x: auto;
-    &-thead > tr,
-    &-tbody > tr {
-      > th,
-      > td {
+
+    &-thead>tr,
+    &-tbody>tr {
+
+      >th,
+      >td {
         white-space: pre;
-        > span {
+
+        >span {
           display: block;
         }
       }
@@ -49,31 +67,33 @@ ol {
 }
 
 // 兼容IE11
-@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
-  body .ant-design-pro > .ant-layout {
+@media screen and(-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+  body .ant-design-pro>.ant-layout {
     min-height: 100vh;
   }
 }
 
-h1{
-  font-size:14px!important;
-  margin-top:4px!important;
-  margin-bottom:2px!important;
+h1 {
+  font-size: 14px !important;
+  margin-top: 4px !important;
+  margin-bottom: 2px !important;
 }
+
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
- }
- 
- 
- /*Track*/
- ::-webkit-scrollbar-track {
+}
+
+
+/*Track*/
+::-webkit-scrollbar-track {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
- }
- 
- /*Handle*/
- ::-webkit-scrollbar-thumb {
+}
+
+/*Handle*/
+::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
- }
+}

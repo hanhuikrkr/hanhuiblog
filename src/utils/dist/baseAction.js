@@ -50,31 +50,21 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var request_1 = require("./request");
-var params_1 = require("./params");
 var react_1 = require("react");
-var mobx_1 = require("mobx");
 var BaseActions = /** @class */ (function (_super) {
     __extends(BaseActions, _super);
     function BaseActions() {
+        // get = async (api: string | string[] , params: RequestOptionsWithResponse) => {
+        //   let url
+        //   if (api.indexOf('?') === -1) {
+        //     url = api + `?${param(params)}`
+        //   } else {
+        //     url = api + `&${param(params)}`
+        //   }
+        //   let data = await request(url, params  )
+        //   return toJS(data)
+        // }
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.get = function (api, params) { return __awaiter(_this, void 0, void 0, function () {
-            var url, data;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        if (api.indexOf('?') === -1) {
-                            url = api + ("?" + params_1.param(params));
-                        }
-                        else {
-                            url = api + ("&" + params_1.param(params));
-                        }
-                        return [4 /*yield*/, request_1["default"](url, params)];
-                    case 1:
-                        data = _a.sent();
-                        return [2 /*return*/, mobx_1.toJS(data)];
-                }
-            });
-        }); };
         _this.post = function (api, params) { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
